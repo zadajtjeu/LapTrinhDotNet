@@ -1,2 +1,2 @@
-Các yêu cầu trong bài ôn tập giống với 2 cái đề mình đính kèm trên. Có thể dùng để tham khảo làm bài.
+Các yêu cầu trong bài ôn tập giống với 2 cái đề tao đính kèm trên. Có thể dùng để tham khảo làm bài.
 Bài này cần check kỹ các trường đúng với định dạng nếu không sẽ bi mất điểm. Có thể sử dụng ErrorProvider để check lỗi.
