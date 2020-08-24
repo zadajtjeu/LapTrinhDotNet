@@ -1,8 +1,7 @@
 # Bài kiểm tra DAO.NET
-Bài này chủ yếu kiểm tra về cách kết nối với SQL Server và Đổ dữ liệu lên Form nên không cần validate các trường.
-Nên làm theo mô hình 3 layer thì sẽ được điểm tuyệt đối. Mấy bài mẫu tao đều làm theo 3 lớp.
-Bài tương đối dễ nếu code yếu thì chỉ cần đổ dữ liệu lên theo đúng yêu cầu dưới là đạt. Có thể xem video này https://www.youtube.com/watch?v=gNcFLGUHgZI
-Cẩn thận nhầm lẫn 2 lớp và 3 lớp nhé!
+- Bài này chủ yếu kiểm tra về cách kết nối với SQL Server và Đổ dữ liệu lên Form nên không cần validate các trường.
+- Nên làm theo mô hình 3 layer thì sẽ được điểm tuyệt đối. Mấy bài mẫu tao đều làm theo 3 lớp.
+- Bài tương đối dễ nếu code yếu thì chỉ cần đổ dữ liệu lên theo đúng yêu cầu dưới là đạt. Có thể xem video này https://www.youtube.com/watch?v=gNcFLGUHgZI
 
 Bài kiểm tra này tao đéo chụp được đề, nhưng cơ bản yêu cầu nó như dưới, form tự thiết kế.
 
