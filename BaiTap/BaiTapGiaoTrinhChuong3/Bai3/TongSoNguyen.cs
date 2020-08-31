@@ -8,8 +8,14 @@ namespace Bai3
 {
     class TongSoNguyen
     {
-        private static int n;
-        public int N { get { return n; } }
+        private int _N;
+
+        public int n
+        {
+            get { return _N; }
+            set { _N = value; }
+        }
+
 
         public TongSoNguyen()
         {
@@ -19,15 +25,7 @@ namespace Bai3
         {
             n = so;
         }
-        public void Nhap()
-        {
-            string inputLine = null;
-            do
-            {
-                Console.Write("n = ");
-                inputLine = Console.ReadLine();
-            } while (int.TryParse(inputLine, out n) == false && n <= 0);
-        }
+
         public int Tong()
         {
             int tong = 0;

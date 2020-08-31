@@ -29,22 +29,6 @@ namespace Bai5
             }
             return tong;
         }
-        public void input()
-        {
-            //xử lý nhập n
-            string inputLine = null;
-            do
-            {
-                Console.Write("n = ");
-                inputLine = Console.ReadLine();
-            } while (int.TryParse(inputLine, out n) == false && n <= 0);
-            //xử lý nhập x
-            inputLine = null;
-            do
-            {
-                Console.Write("x = ");
-                inputLine = Console.ReadLine();
-            } while (double.TryParse(inputLine, out x) == false);
-        }
+
     }
 }

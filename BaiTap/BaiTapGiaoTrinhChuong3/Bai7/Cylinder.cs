@@ -19,19 +19,7 @@ namespace Bai7
             radius = r;
             height = h;
         }
-        public void input()
-        {
-            //xử lý nhập radius
-            do
-            {
-                Console.Write("Bán kính r = ");
-            } while (double.TryParse(Console.ReadLine(), out radius) == false && radius <= 0);
-            //xử lý nhập height
-            do
-            {
-                Console.Write("Chiều cao h = ");
-            } while (double.TryParse(Console.ReadLine(), out height) == false && height <= 0);
-        }
+        
         public double Volume() // Thể tích V
         {
             return Math.PI * Math.Pow(radius, 2) * height;

@@ -8,8 +8,14 @@ namespace Bai2
 {
     class TinhTong
     {
-        private static int n;
-        public int N { get { return n; } }
+        private int _N;
+
+        public int n
+        {
+            get { return _N; }
+            set { _N = value; }
+        }
+
         public TinhTong()
         {
             n = 0;
@@ -17,15 +23,6 @@ namespace Bai2
         public TinhTong(int so)
         {
             n = so;
-        }
-        public void Nhap()
-        {
-            string inputLine = null;
-            do
-            {
-                Console.Write("n = ");
-                inputLine = Console.ReadLine();
-            } while (int.TryParse(inputLine, out n) == false && n <= 0);
         }
         public int Tong()
         {

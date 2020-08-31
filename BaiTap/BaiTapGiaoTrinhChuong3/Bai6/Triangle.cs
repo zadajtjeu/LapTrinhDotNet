@@ -25,25 +25,7 @@ namespace Bai6
                 return true;
             return false;
         }
-        public void input()
-        {
-            //xử lý nhập a
-            do
-            {
-                Console.Write("a = ");
-            } while (double.TryParse(Console.ReadLine(), out a) == false && a <= 0);
-            //xử lý nhập ab
-            do
-            {
-                Console.Write("b = ");
-            } while (double.TryParse(Console.ReadLine(), out b) == false && b <= 0);
-            //xử lý nhập c
-            do
-            {
-                Console.Write("c = ");
-            } while (double.TryParse(Console.ReadLine(), out c) == false && c <= 0);
 
-        }
         public string typeOfTriangle()
         {
             int check = 0;

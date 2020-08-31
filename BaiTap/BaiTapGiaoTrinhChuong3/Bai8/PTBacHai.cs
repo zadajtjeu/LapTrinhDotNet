@@ -19,24 +19,7 @@ namespace Bai8
             this.b = b;
             this.c = c;
         }
-        public void Nhap()
-        {
-            //xử lý nhập a
-            do
-            {
-                Console.Write("a = ");
-            } while (double.TryParse(Console.ReadLine(), out a) == false && a <= 0);
-            //xử lý nhập b
-            do
-            {
-                Console.Write("b = ");
-            } while (double.TryParse(Console.ReadLine(), out b) == false && b <= 0);
-            //xử lý nhập c
-            do
-            {
-                Console.Write("c = ");
-            } while (double.TryParse(Console.ReadLine(), out c) == false && c <= 0);
-        }
+
         public void GiaiPhuongTrinhBacNhat()
         {
             if (b == 0)
