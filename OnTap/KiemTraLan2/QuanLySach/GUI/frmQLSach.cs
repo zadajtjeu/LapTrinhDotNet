@@ -52,20 +52,13 @@ namespace GUI
         {
             SachBUL sachBUL = new SachBUL();
             dgvSach.DataSource = sachBUL.DanhSach();
-
-            dgvSach.Columns["MaSach"].HeaderText = "Mã Sách";
-            dgvSach.Columns["TenSach"].HeaderText = "Tên Sách";
-            dgvSach.Columns["SoLuongCo"].HeaderText = "Số Lượng";
-            dgvSach.Columns["MaTacGia"].HeaderText = "Tác Giả";
-            dgvSach.Columns["NgayXuatBan"].HeaderText = "Ngày Xuất Bản";
-
             dgvSach.PerformLayout();
         }
 
         private void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            if (index >= 0)
+            if (index > 0)
             {
                 txtMaS.Text = dgvSach.Rows[index].Cells["MaSach"].Value.ToString();
                 txtTenS.Text = dgvSach.Rows[index].Cells["TenSach"].Value.ToString();

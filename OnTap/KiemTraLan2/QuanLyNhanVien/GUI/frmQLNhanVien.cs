@@ -47,15 +47,6 @@ namespace GUI
         {
             NhanVienBUL nvBUL = new NhanVienBUL();
             dgvNhanVien.DataSource = nvBUL.DanhSach();
-
-            dgvNhanVien.Columns["MaNhanVien"].HeaderText = "Mã Nhân Viên";
-            dgvNhanVien.Columns["TenNhanVien"].HeaderText = "Họ Tên";
-            dgvNhanVien.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
-            dgvNhanVien.Columns["LuongCanBan"].HeaderText = "Lương Căn Bản";
-            dgvNhanVien.Columns["NgayCong"].HeaderText = "Số Ngày Công";
-            dgvNhanVien.Columns["PhuCap"].HeaderText = "Phụ Cấp";
-            dgvNhanVien.Columns["MaChucVu"].HeaderText = "Chức Vụ";
-
             dgvNhanVien.PerformLayout();
         }
 
@@ -70,7 +61,7 @@ namespace GUI
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            if (index >= 0)
+            if (index > 0)
             {
                 txtMaNV.Text = dgvNhanVien.Rows[index].Cells["MaNhanVien"].Value.ToString();
                 txtHoTen.Text = dgvNhanVien.Rows[index].Cells["TenNhanVien"].Value.ToString();
