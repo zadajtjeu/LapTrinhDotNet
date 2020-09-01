@@ -29,7 +29,31 @@ namespace GUI
         private void ShowSanPhamToDGV()
         {
             SanPhamBUL spb = new SanPhamBUL();
-            dgvSanPham.DataSource = spb.DanhSach();
+            DanhMucBUL dmb = new DanhMucBUL();
+            List<DanhMucDTO> dsDanhMuc = dmb.DanhSach();
+            List<SanPhamDTO> dsSanPham = spb.DanhSach();
+            //Linq
+            dgvSanPham.DataSource = (from sp in dsSanPham
+                                     from dm in dsDanhMuc
+                                     where sp.MaDanhMuc.Equals(dm.MaDanhMuc)
+                                     select new
+                                     {
+                                         sp.MaSanPham,
+                                         sp.TenSanPham,
+                                         sp.DonGia,
+                                         sp.SoLuong,
+                                         sp.MaDanhMuc,
+                                         dm.TenDanhMuc
+                                     }
+                                     ).ToList();
+
+            dgvSanPham.Columns["MaSanPham"].HeaderText = "Mã Sản Phẩm";
+            dgvSanPham.Columns["TenSanPham"].HeaderText = "Tên Sản Phẩm";
+            dgvSanPham.Columns["DonGia"].HeaderText = "Đơn Giá";
+            dgvSanPham.Columns["SoLuong"].HeaderText = "Số Lượng";
+            dgvSanPham.Columns["MaDanhMuc"].Visible = false;
+            dgvSanPham.Columns["TenDanhMuc"].HeaderText = "Danh Mục";
+
             dgvSanPham.PerformLayout();
         }
 
@@ -43,19 +67,23 @@ namespace GUI
 
         private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow dgvRow = dgvSanPham.Rows[e.RowIndex];
-            txtMaSP.Text = dgvRow.Cells["MaSanPham"].Value.ToString();
-            txtTenSP.Text = dgvRow.Cells["TenSanPham"].Value.ToString();
-            txtSoLuong.Text = dgvRow.Cells["SoLuong"].Value.ToString();
-            txtDonGia.Text = dgvRow.Cells["DonGia"].Value.ToString();
-            cboDanhMuc.SelectedValue = dgvRow.Cells["MaDanhMuc"].Value.ToString();
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+                DataGridViewRow dgvRow = dgvSanPham.Rows[index];
+                txtMaSP.Text = dgvRow.Cells["MaSanPham"].Value.ToString();
+                txtTenSP.Text = dgvRow.Cells["TenSanPham"].Value.ToString();
+                txtSoLuong.Text = dgvRow.Cells["SoLuong"].Value.ToString();
+                txtDonGia.Text = dgvRow.Cells["DonGia"].Value.ToString();
+                cboDanhMuc.SelectedValue = dgvRow.Cells["MaDanhMuc"].Value.ToString();
 
-            //Disable Button and Text box
-            btnThem.Enabled = false;
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
-            btnTim.Enabled = false;
-            txtMaSP.Enabled = false;
+                //Disable Button and Text box
+                btnThem.Enabled = false;
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+                btnTim.Enabled = false;
+                txtMaSP.Enabled = false; 
+            }
         }
 
         private void btnReset_Click(object sender, EventArgs e)
