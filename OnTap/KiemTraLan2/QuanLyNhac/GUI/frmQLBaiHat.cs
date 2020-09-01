@@ -51,6 +51,11 @@ namespace GUI
         {
             NhacBUL songBUL = new NhacBUL();
             dgvBaiHat.DataSource = songBUL.DanhSach();
+            dgvBaiHat.Columns["MaBaiHat"].HeaderText = "Mã Bài Hát";
+            dgvBaiHat.Columns["TenBaiHat"].HeaderText = "Tên Bài Hát";
+            dgvBaiHat.Columns["Album"].HeaderText = "Tên Album";
+            dgvBaiHat.Columns["NgayRaMat"].HeaderText = "Ngày Ra Mắt";
+            dgvBaiHat.Columns["MaCaSi"].HeaderText = "Mã Ca Sỹ";
             dgvBaiHat.PerformLayout();
         }
 
