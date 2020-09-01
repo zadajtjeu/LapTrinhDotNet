@@ -50,6 +50,12 @@ namespace GUI
         {
             HoaDonBUL hdBUL = new HoaDonBUL();
             dgvHoaDon.DataSource = hdBUL.DanhSach();
+            dgvHoaDon.Columns["MaHoaDon"].HeaderText = "Mã Hóa Đơn";
+            dgvHoaDon.Columns["MaKhachHang"].HeaderText = "Mã Khách Hàng";
+            dgvHoaDon.Columns["ChiSoCu"].HeaderText = "Chỉ Số Cũ";
+            dgvHoaDon.Columns["NgayCu"].HeaderText = "Ngày Đo Cũ";
+            dgvHoaDon.Columns["ChiSoMoi"].HeaderText = "Chỉ Số Mới";
+            dgvHoaDon.Columns["NgayDo"].HeaderText = "Ngày Đo Mới";
         }
 
         private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
