@@ -12,3 +12,11 @@ Bài Tập và tài liệu môn Lập trình .Net - Lập trình Winform - C# - 
 > "Visual studio Pro Keys:"
 - **KBJFW-NXHK6-W4WJM-CRMQB-G3CDH**
 - *HMGNV-WCYXV-X7G9W-YCX63-B98R2*
+
+Bô nết thêm mấy key khi cài cho máy ở nhà nè.
+
+> "Visual studio Enterprise 2017 Keys:"
+- DBMYV-V2N6M-VT998-C2KFW-XW364
+
+> "Visual studio Enterprise 2019 Keys:"
+- DR3RN-9VR4B-XTW68-3CJ34-84664
